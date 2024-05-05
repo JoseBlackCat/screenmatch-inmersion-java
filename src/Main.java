@@ -30,12 +30,21 @@ public class Main {
             System.out.println("Antigua pero digna de ver");
         }
 
-        for (int i = 0; i < 3; i++) {
+        int j = 0;
+        while (j < 3) {
             Scanner teclado = new Scanner(System.in);
             System.out.println("Ingresa tu calificación a la película: ");
             double calificacionPelicula = teclado.nextDouble();
             mediaEvaluacionesUsuario = mediaEvaluacionesUsuario + calificacionPelicula;
+            j++;
         }
+
+//        for (int i = 0; i < 3; i++) {
+//            Scanner teclado = new Scanner(System.in);
+//            System.out.println("Ingresa tu calificación a la película: ");
+//            double calificacionPelicula = teclado.nextDouble();
+//            mediaEvaluacionesUsuario = mediaEvaluacionesUsuario + calificacionPelicula;
+//        }
 
         System.out.println("Media de la película " + nombreDePelicula + " es " + mediaEvaluacionesUsuario / 3);
     }
