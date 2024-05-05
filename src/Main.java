@@ -1,51 +1,29 @@
-import java.util.Scanner;
+import modelo.Pelicula;
+import modelo.Serie;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Bienvenidos a la inmersión en Java");
-        // System.out.println("Película Matrix");
+        Pelicula pelicula1 = new Pelicula();
 
-//        DECLARACION DE VARIABLES
+        pelicula1.setNombre("Matrix");
+        pelicula1.setTiempoDeDuracionEnMinutos(120);
+        pelicula1.setFechaDeLanzamiento(1999);
+        pelicula1.muestraFichaTecnica();
 
-        int fechaDeLanzamiento = 1999;
-        double evaluacion = 4.5;
-        boolean incluidoEnELPlanBasico = true;
-        String nombreDePelicula = "Matrix";
-        String sinopsis = """
-                La mejor película del fin del milenio
-                """;
-        double mediaEvaluacionesUsuario = 0;
+        Pelicula pelicula2 = new Pelicula();
 
-        System.out.println("Película: " + nombreDePelicula);
-        System.out.println("Fecha de lanzamiento: " + fechaDeLanzamiento);
-        System.out.println("Evaluación: " + evaluacion);
-        System.out.println("Habilitado: " + incluidoEnELPlanBasico);
+        pelicula2.setNombre("Encanto");
+        pelicula2.setTiempoDeDuracionEnMinutos(120);
+        pelicula2.setFechaDeLanzamiento(2022);
+        pelicula2.muestraFichaTecnica();
 
-        double mediaEvaluacion = (4.5 + 4.8 + 3) / 3;
-        System.out.println("Media de la evaluación de " + nombreDePelicula + ": " + mediaEvaluacion);
+        Serie serie1 = new Serie();
 
-        if (fechaDeLanzamiento > 2023) {
-            System.out.println("La más reciente");
-        } else {
-            System.out.println("Antigua pero digna de ver");
-        }
-
-        int j = 0;
-        while (j < 3) {
-            Scanner teclado = new Scanner(System.in);
-            System.out.println("Ingresa tu calificación a la película: ");
-            double calificacionPelicula = teclado.nextDouble();
-            mediaEvaluacionesUsuario = mediaEvaluacionesUsuario + calificacionPelicula;
-            j++;
-        }
-
-//        for (int i = 0; i < 3; i++) {
-//            Scanner teclado = new Scanner(System.in);
-//            System.out.println("Ingresa tu calificación a la película: ");
-//            double calificacionPelicula = teclado.nextDouble();
-//            mediaEvaluacionesUsuario = mediaEvaluacionesUsuario + calificacionPelicula;
-//        }
-
-        System.out.println("Media de la película " + nombreDePelicula + " es " + mediaEvaluacionesUsuario / 3);
+        serie1.setNombre("Friends");
+        serie1.setFechaDeLanzamiento(1996);
+        serie1.setTemporada(10);
+        serie1.setEpisodioPorTemporada(22);
+        serie1.setDuracionPorEpisodioEnMinutos(30);
+        serie1.muestraFichaTecnica();
     }
 }
